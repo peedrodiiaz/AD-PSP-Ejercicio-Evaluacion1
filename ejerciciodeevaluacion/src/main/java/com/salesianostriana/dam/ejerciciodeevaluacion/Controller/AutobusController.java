@@ -20,6 +20,9 @@ public class AutobusController {
     private final AutobusService autobusService;
     @GetMapping
     @Operation(description = "Responde a la petición para conseguir todas las rutas")
+    @ApiResponse(
+            responseCode = "200"
+    )
     public ResponseEntity<List> findAll(){
 
         return ResponseEntity.ok(autobusService.findAll());
